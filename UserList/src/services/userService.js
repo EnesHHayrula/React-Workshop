@@ -16,8 +16,8 @@ export const create = async (data) => {
     email: data.email,
     imageUrl: data.imageUrl,
     phoneNumber: data.phoneNumber,
-    createdAt: new Date().toISOString,
-    updatedAt: new Date().toISOString,
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString(),
     address: {
       country: data.country,
       city: data.city,
