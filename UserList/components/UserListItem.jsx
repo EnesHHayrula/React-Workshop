@@ -1,4 +1,4 @@
-import { formatDate } from "../utils/dataUtils";
+import { formatDate } from "../src/utils/dataUtils";
 
 const UserListItem = ({
     userId,

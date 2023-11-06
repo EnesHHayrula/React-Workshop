@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-import * as userService from "../services/userService";
+import * as userService from "../src/services/userService";
 
 import UserListItem from './UserListItem';
 import CreateUserModal from "./CreateUserModal";
