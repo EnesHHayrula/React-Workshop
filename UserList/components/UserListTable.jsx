@@ -41,6 +41,7 @@ const UserListTable = () => {
           onUserCreate={userCreateHandler}
         />
       )}
+      {showInfo && <UserInfoModal onClose={} />}
       <table className="table">
         <thead>
           <tr>
