@@ -57,11 +57,29 @@ export const remove = async (userId) => {
   return result;
 };
 
-export const edit = async (userId) => {
-  //TODO:
+export const edit = async (userId, data) => {
+  const body = {
+    firstName: data.firstName,
+    lastName: data.lastName,
+    email: data.email,
+    imageUrl: data.imageUrl,
+    phoneNumber: data.phoneNumber,
+    updatedAt: new Date().toISOString(),
+    address: {
+      country: data.country,
+      city: data.city,
+      street: data.street,
+      streetNumber: data.streetNumber,
+    },
+  };
+
   const response = await fetch(`${baseUrl}/${userId}`, {
-    method: "EDIT",
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(body),
   });
-  const result = await response.json();
-  return result;
+
+  return await response.json();
 };
